@@ -3,9 +3,10 @@ const cors = require('cors')
 const ConnectionMYSQL = require('./database/connectionMYSLQ')
 const { ConstantsQueries } = require('./constants/queries')
 const {router:vehiclesRouter} = require("./routes/vehiclesRouter")
-const {router:distritosRouter} = require("./routes/districtRouter")
+const {router:distritosRouter} = require("./routes/distritosRouter")
 const {router:sucursalesRouter} = require("./routes/branchofficeRouter")
 const {router:tallerRouter} = require("./routes/workshopRouter")
+const {router:clienteRouter} = require("./routes/clientRouter")
 
 const app = express()
 
@@ -21,6 +22,7 @@ app.use("/vehicles", vehiclesRouter)
 app.use("/distritos", distritosRouter)
 app.use("/sucursales", sucursalesRouter)
 app.use("/taller", tallerRouter)
+app.use("/cliente", clienteRouter)
 
 /* app.use("*", ErrorHandler.notFound)
 app.use(ErrorHandler.generic) */

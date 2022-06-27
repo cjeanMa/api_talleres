@@ -1,5 +1,6 @@
 const ConstantsQueries = {
     GET_ALL_VEHICLES: 'SELECT * FROM VEHICULO',
+    GET_ALL_CLIENTES: 'SELECT * FROM CLIENTE',
     GET_ALL_DISTRITOS: 'SELECT * FROM DISTRITO',
     GET_ALL_SUCURSAL: 'SELECT * FROM SUCURSAL',
     GET_VEHICLES_BY_CLIENT: 'SELECT v.idvehiculo, v.placa, v.marca, v.modelo, v.color, v.anio FROM vehiculo v INNER JOIN poliza p ON v.idvehiculo = p.idvehiculo INNER JOIN (SELECT * FROM cliente WHERE dni=?) per ON p.idcliente=per.idcliente',

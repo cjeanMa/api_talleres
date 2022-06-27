@@ -1,5 +1,5 @@
 
-const mappingResponse = (status, dataResponse) =>{
+const generalResponse = (status, dataResponse) =>{
 
     return ({
         status,
@@ -11,5 +11,5 @@ const mappingResponse = (status, dataResponse) =>{
 }
 
 module.exports = {
-    mappingResponse
+    generalResponse
 }
